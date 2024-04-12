@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main(){
+    int m,n;
+    printf("enter the number the matrix:");
+    scanf("%d",&m);
+    printf("enter the number of the matrix:");
+    scanf("%d",&n);
+    int i,j,a[m][n],b[m][n];
+    printf("enter the first matrix:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("enter the second matrix:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("the first matrix is:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("the second matrix is:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",b[i][j]);
+        }
+        printf("\n");
+    }
+    int equal=1;
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+        if(a[i][j]!=b[i][j]){
+            equal=0;
+            break;
+        }
+    }
+}
+if(equal==1){
+    printf("identical matrix");
+}
+else{
+    printf("not identical matrix");
+}
+return 0;
+
+}
